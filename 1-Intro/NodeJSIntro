@@ -1,0 +1,13 @@
+Node
+
+terminal
+
+node
+console.log('Hello World!!!');
+global (browser - window)
+process (browser - document)
+process.exit(0);
+ctrl+c
+
+
+ndoejs.org/api
