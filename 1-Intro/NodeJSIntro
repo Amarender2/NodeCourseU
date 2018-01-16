@@ -11,3 +11,67 @@ ctrl+c
 
 
 ndoejs.org/api
+
+
+npm init to create package.json
+
+npm install lodash --save
+
+npm install will create node_modules
+
+Nodemon to watch for changes and restarts node app
+
+
+node app.js list --title="secrets"
+
+Simplify with yargs
+npm install yargs@4.7.1 --save
+
+
+node inspect debug.js
+list(10); - lists 10 lines of code from point of stop
+n - next statement
+c - continue
+repl
+ex: person, person.age
+
+debugger to add break points
+
+To use chrome for debugging
+node --inspect-brk mainapp.js read --title=secret3
+chrome://inspect/devices
+inspect
+
+var titleOptions = {
+    describe: 'Title of note',
+    demand: true,
+    alias: 't'
+};
+
+var bodyOptions = {
+    describe: 'Contents of note',
+    demand: true,
+    alias: 'b'
+};
+
+
+Advanced Yargs
+======================================
+var argv = yargs
+    .command('add', 'Add a new note', {
+        title: titleOptions,
+        body: bodyOptions
+    })
+    .command('list', 'Lists all notes')
+    .command('read', 'Reads a note', {
+        title: titleOptions
+    })
+    .command('remove', 'Removes a note', {
+        title: titleOptions
+    })
+    .help()
+    .argv
+
+
+If not using this or arguments in method, use arrow functions
+
